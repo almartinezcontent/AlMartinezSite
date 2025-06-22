@@ -3,230 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Al Martinez</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
-      color: white;
-    }
-    h1, h2, h3 {
-      font-family: 'Poppins', sans-serif;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .hover-scale {
-      transition: transform 0.3s ease;
-    }
-    .hover-scale:hover {
-      transform: scale(1.05);
-    }
-    .glow-button {
-      transition: box-shadow 0.3s ease, background-color 0.3s ease;
-    }
-    .glow-button:hover {
-      box-shadow: 0 0 15px rgba(234, 179, 8, 0.5);
-    }
-    .move-logo {
-      transition: transform 0.3s ease;
-    }
-    .move-logo:hover {
-      transform: translateY(-5px);
-    }
-    .logos-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .logos-container > img {
-      height: 5rem;
-    }
-    section {
-      min-height: 80vh;
-      padding: 1rem;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .slide-up-text {
-      animation: slideUp 0.6s ease-out;
-    }
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-      .animate-slideUp {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: slideUp 0.5s ease-out forwards;
-    }
-    @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-</head>
-<body class="text-white">
-  <!-- Loader -->
-  <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
-    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
-  </div>
-
-  <!-- Header -->
-  <header class="text-white py-6 sticky top-0 z-40 shadow-lg bg-black bg-opacity-10">
-    <div class="container mx-auto px-6 flex justify-between items-center">
-      <div>
-        <h1 class="text-3xl font-bold">Al Martinez</h1>
-        <p class="text-sm text-blue-400 opacity-80">Video Editor</p>
-      </div>
-      <nav class="space-x-6">
-        <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
-        <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-        <a href="#services" class="hover:text-blue-400 transition-colors">Services</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="py-20 w-full">
-    <div class="container mx-auto px-6 fade-in">
-      <div class="text-center mb-6">
-  <div class="flex flex-wrap justify-center gap-2">
-  <span class="text-blue-400 text-5xl font-bold animate-slideUp" style="animation-delay: 600ms">Essence</span>
-  <span class="text-blue-400 text-5xl font-bold animate-slideUp" style="animation-delay: 700ms">is</span>
-  <span class="text-blue-400 text-5xl font-bold animate-slideUp" style="animation-delay: 800ms">the</span>
-  <span class="text-blue-400 text-5xl font-bold animate-slideUp" style="animation-delay: 900ms">new</span>
-  <span class="text-blue-400 text-5xl font-bold animate-slideUp" style="animation-delay: 1000ms">meta.</span>
-</div>
-</div>
-<br>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-        <img src="profile.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-2 border-gray-700 object-cover">
-        <div class="text-center md:text-left">
-          <h1 class="text-4xl font-bold mb-2">Al Martinez</h1>
-          <p class="text-blue-400 text-lg mb-2">Video Editor</p>
-          <p class="text-gray-300 max-w-md">
-            I want to deliver more than just one-off freelance work. Right now, I'm focused on building long-term partnerships, growing results, and creating the kind of work that makes both you and me proud.
-          </p>
-        </div>
-        <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
-            <a href="#projects" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm py-1 px-4 rounded transition duration-300">View Projects</a>
-            <a href="#contact" class="bg-transparent border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black font-semibold text-sm py-1 px-4 rounded transition duration-300">Contact Me</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    <!-- Tools I Use Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-6 text-center fade-in">
-            <h2 class="text-4xl font-bold text-blue-400 mb-12">Tools I Use</h2>
-            <div class="logos-container">
-                <img src="capcut.png" alt="CapCut" class="h-20 move-logo">
-                <img src="pr.png" alt="Premiere Pro" class="h-20 move-logo">
-                <img src="ae.png" alt="After Effects" class="h-20 move-logo">
-            </div>
-            <br>
-            <p class="text-base text-gray-300 max-w-md mx-auto">These tools allow me to achieve high quality videos.</p>
-        </div>
-        <div class="overflow-x-auto whitespace-nowrap py-4 px-2">
-</div>
-        
-    </section>
-<!-- Projects Section -->
-<section id="projects" class="py-12">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-blue-400 text-center mb-10">Projects</h2>
-    <div class="flex flex-wrap justify-center gap-4">
-
-      <!-- Card 2 -->
-      <div class="bg-gray-800 rounded-lg shadow-lg p-2 w-[260px] hover-scale fade-in">
-        <div class="aspect-w-9 aspect-h-16 mb-2">
-          <video class="w-full h-full rounded-md" controls>
-            <source src="P1.FINAL CONTENT.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-gray-800 rounded-lg shadow-lg p-2 w-[260px] hover-scale fade-in">
-        <div class="aspect-w-9 aspect-h-16 mb-2">
-          <video class="w-full h-full rounded-md" controls>
-            <source src="Short form video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-        
-      </div>
-    <div class="text-center mt-6">
-      <a href="https://drive.google.com/drive/folders/1UVsiQZmH7RAglYzU4dP10nLQZG0H6u4B" class="text-white hover:underline text-sm">Show More</a>
-    </div>
-  </div>
-</section>
-
-
-
-    <!-- Services Section -->
-    <section id="services" class="py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-blue-400 text-center mb-4">My Services</h2>
-            <p class="text-lg text-gray-300 text-center mb-12">Digital Solutions</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-800 rounded-lg p-6 hover-scale fade-in">
-                    <h3 class="text-xl font-semibold text-white mb-4">Short-Form Content</h3>
-                    <p class="text-gray-300">I edit short-form videos that don’t feel forced. Just clean cuts, solid pacing, and captions that make people stop scrolling. You send the clips, I handle the rest.</p>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 hover-scale fade-in">
-                    <h3 class="text-xl font-semibold text-white mb-4">More coming soon!</h3>
-                    <p class="text-gray-300">For now, I want to focus on short-form editing. When the time comes, I will be doing long-form contents so that I can help creators out there
-                      to grow.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-blue-400 text-center mb-4">Satisfied Clients Speak Out</h2>
-            <p class="text-lg text-gray-300 text-center mb-12">Real stories from real customers</p>
-            <div class="flex justify-center">
-                <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-lg text-center fade-in">
-                    <p class="text-gray-300 italic mb-4">"Al was great at editing, fast turnaround and quality work."</p>
-                    <p class="font-semibold text-white">Mark King</p>
-                    <p class="text-gray-400">Mark King Real Estate.</p>
-                </div>
-              <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Al Martinez - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
@@ -436,72 +212,25 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-blue-400 text-center mb-4">Satisfied Clients Speak Out</h2>
-            <p class="text-lg text-gray-300 text-center mb-12">Real stories from real customers</p>
-            <div class="flex justify-center">
-                <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-lg text-center fade-in">
-                    <p class="text-gray-300 italic mb-4">"Al was great at editing, fast turnaround and quality work."</p>
-                    <p class="font-semibold text-white">Mark King</p>
-                    <p class="text-gray-400">Mark King Real Estate.</p>
-                </div>
+<section class="py-16">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-blue-400 text-center mb-4">Satisfied Clients Speak Out</h2>
+        <p class="text-lg text-gray-300 text-center mb-12">Real stories from real customers</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+            <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-lg text-center fade-in">
+                <p class="text-gray-300 italic mb-4">"Al was great at editing, fast turnaround and quality work."</p>
+                <p class="font-semibold text-white">Mark King</p>
+                <p class="text-gray-400">Mark King Real Estate.</p>
             </div>
-            <div class="flex justify-center">
-                <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-lg text-center fade-in">
-                    <p class="text-gray-300 italic mb-4">"Very easy to work with, adaptable, and provides quality results."</p>
-                    <p class="font-semibold text-white">Alma Jean Lapetaje</p>
-                    <p class="text-gray-400">Former Client</p>
-                </div>
+            <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-lg text-center fade-in">
+                <p class="text-gray-300 italic mb-4">"Very easy to work with, adaptable, and provides quality results."</p>
+                <p class="font-semibold text-white">Alma Jean Lapetaje</p>
+                <p class="text-gray-400">Former Client</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 text-white">
-        <div class="container mx-auto px-6 text-center fade-in">
-            <h2 class="text-4xl font-bold text-blue-400 text-center mb-4">Ready to Elevate Your Digital Presence?</h2>
-            <p class="text-lg mb-8">Connect with me and let's build something amazing together.</p>
-            <a href="mailto:martinez.andrelorenz@gmail.com" class="bg-transparent border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black font-semibold text-sm py-1 px-4 rounded transition duration-300">Get Started</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <p class="mb-4">© Al Martinez. All rights reserved.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="https://www.instagram.com/almartinezcontent/reels/" class="hover:text-blue-400 transition-colors">Instagram</a>
-                <a href="https://www.tiktok.com/@almartinezcontent" class="hover:text-blue-400 transition-colors">Tiktok</a>
-                <a href="https://www.youtube.com/@almartinezcontent" class="hover:text-blue-400 transition-colors">Youtube</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Loader
-        window.addEventListener('load', () => {
-            document.getElementById('loader').style.display = 'none';
-        });
-
-        // Fade-in animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in').forEach(element => {
-            observer.observe(element);
-        });
-    </script>
-</body>
-</html>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 text-white">
